@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: arial;
+      }
+      #box {
+        background: pink;
+        padding: 10px;
+        border: 1px solid #000;
+      }
+      #box2 {
+        background: #00ffff;
+        padding: 10px;
+        border: 1px solid #000;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="head_1">Jquery Third step</h1>
+    <h2>Mouse Events in jquery</h2>
+    <div id="box" class="test">
+      <h2>Container one</h2>
+      <p>click() dbClick() contextmenu() mouseenter() mouseleave()</p>
+    </div>
+
+    <h2>Keyboard Events in jquery</h2>
+    <div id="box2" class="test">
+      <h2>Container two</h2>
+      <p>keypress() keydown() keyup()</p>
+    </div>
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        //single click
+        $("#box").click(function () {
+          $("#box").css("background-color", "green");
+        });
+        //double click
+        $("#box").dblclick(function () {
+          $("#box").css("background-color", "red");
+        });
+        //right click
+        $("#box").contextmenu(function () {
+          $("#box").css("background-color", "orange");
+        });
+        //mouse enter
+        $("#box").mouseenter(function () {
+          $("#box").css("background-color", "tan");
+        });
+        //mouse leave
+        $("#box").mouseleave(function () {
+          $("#box").css("background-color", "MediumSeaGreen");
+        });
+
+        //keyboard event
+        //keypress()
+        $("body").keypress(function () {
+          (this).css("background-color", "pink");
+        });
+        //keydown()
+        $("body").keydown(function () {
+          $(this).css("background-color", "blue");
+          console.log("hi")
+        });
+        //keyup()
+        $("body").keyup(function () {
+          $(this).css("background-color", "orange");
+        });
+      });
+    </script>
+  </body>
+</html>

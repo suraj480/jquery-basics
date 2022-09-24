@@ -1,0 +1,13 @@
+#test1{
+    color: red;
+}
+#test2{
+    color: olive;
+    width: 300px;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
+}
+.head_1{
+    color: yellow;
+}
