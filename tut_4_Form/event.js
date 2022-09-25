@@ -14,7 +14,17 @@ $(document).ready(function(){
         $(this).css('background-color','yellow');
     });
     $("#sform").submit(function(){
-        $("body").css('background-color','yellow');
+        var ssname=$('#sname').val();
+        alert("name",ssname)
+        console.log(ssname)
+      //  $("body").css('background-color','yellow');
+    });
+    $("#clickbutton").click(function(){
+        $('#box').text('welcome to jquery world')
+        //var ssname=$('#sname').val();
+       // alert("name",ssname)
+       // console.log(ssname)
+      //  $("body").css('background-color','yellow');
     });
 
 
